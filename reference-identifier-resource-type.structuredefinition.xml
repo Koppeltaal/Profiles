@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="reference-identifier-resource-type" />
+  <meta>
+    <lastUpdated value="2017-07-18T10:41:00.412+02:00" />
+  </meta>
+  <url value="http://ggz.koppeltaal.nl/fhir/StructureDefinition/reference-identifier-resource-type" />
+  <name value="reference-identifier-resource-type" />
+  <status value="draft" />
+  <date value="2017-07-18T09:34:10.1876601+02:00" />
+  <publisher value="Stichting Koppeltaal" />
+  <description value="This extension adds a resource type to Reference.identifier" />
+  <purpose value="Allowing to recognize the resource type used in resolving logical references" />
+  <fhirVersion value="3.0.1" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <contextType value="datatype" />
+  <context value="Reference.identifier" />
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <differential>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="http://ggz.koppeltaal.nl/fhir/StructureDefinition/reference-identifier-resource-type" />
+    </element>
+    <element id="Extension.value[x]:valueCode">
+      <path value="Extension.valueCode" />
+      <sliceName value="valueCode" />
+      <short value="Resource Type" />
+      <definition value="Resource Type of the resource the identifier points to." />
+      <type>
+        <code value="code" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <description value="One of the resource types defined as part of FHIR." />
+        <valueSetReference>
+          <reference value="http://hl7.org/fhir/ValueSet/resource-types" />
+        </valueSetReference>
+      </binding>
+    </element>
+  </differential>
+</StructureDefinition>

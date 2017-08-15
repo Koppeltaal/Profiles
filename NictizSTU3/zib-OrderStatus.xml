@@ -1,0 +1,39 @@
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <meta>
+    <lastUpdated value="2017-05-22T14:47:50.767+02:00" />
+  </meta>
+  <url value="http://nictiz.nl/fhir/StructureDefinition/zib-OrderStatus" />
+  <name value="ZIB-OrderStatus" />
+  <title value="ZIB OrderStatus" />
+  <status value="draft" />
+  <date value="2017-05-17T16:33:21.6198582+02:00" />
+  <publisher value="Nictiz" />
+  <description value="The status of the order." />
+  <copyright value="CC0" />
+  <fhirVersion value="3.0.0" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <contextType value="resource" />
+  <context value="ImmunizationRecommendation" />
+  <context value="Appointment.status" />
+  <context value="DeviceRequest.status" />
+  <context value="ProcedureRequest.status" />
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element>
+      <path value="Extension.url" />
+      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/zib-OrderStatus" />
+    </element>
+    <element>
+      <path value="Extension.valueCodeableConcept" />
+      <short value="OrderStatus" />
+      <definition value="The status of the order." />
+      <alias value="OrderStatus" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

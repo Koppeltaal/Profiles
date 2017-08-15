@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <meta>
+    <lastUpdated value="2017-07-18T11:28:10.604+02:00" />
+  </meta>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="cds" />
+  </extension>
+  <url value="http://ggz.koppeltaal.nl/fhir/StructureDefinition/KoppeltaalActivityDefinition" />
+  <name value="KoppeltaalActivityDefinition" />
+  <status value="draft" />
+  <date value="2017-07-06T11:24:17.6186976+02:00" />
+  <fhirVersion value="3.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="ActivityDefinition" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/ActivityDefinition" />
+  <derivation value="constraint" />
+  <differential>
+    <element>
+      <path value="ActivityDefinition.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="ActivityDefinition.extension:subactivities">
+      <path value="ActivityDefinition.extension" />
+      <sliceName value="subactivities" />
+      <short value="Optional Extensions Element" />
+      <definition value="Optional Extension Element - found in all resources." />
+      <type>
+        <code value="Extension" />
+        <profile value="http://ggz.koppeltaal.nl/fhir/activitydefinition-subactivity" />
+      </type>
+    </element>
+    <element id="ActivityDefinition.extension:device">
+      <path value="ActivityDefinition.extension" />
+      <sliceName value="device" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://ggz.koppeltaal.nl/fhir/StructureDefinition/KoppeltaalActivityDefinition-device" />
+      </type>
+    </element>
+    <element id="ActivityDefinition.extension:device.value[x]:valueReference">
+      <path value="ActivityDefinition.extension.valueReference" />
+      <sliceName value="valueReference" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAidProduct" />
+      </type>
+    </element>
+    <element id="ActivityDefinition.code.coding.system">
+      <path value="ActivityDefinition.code.coding.system" />
+      <fixedUri value="http://ggz.koppeltaal.nl/fhir/ActivityKind" />
+    </element>
+    <element id="ActivityDefinition.code.coding.code">
+      <path value="ActivityDefinition.code.coding.code" />
+      <binding>
+        <strength value="required" />
+        <valueSetUri value="http://ggz.koppeltaal.nl/fhir/ValueSet/ActivityKind" />
+      </binding>
+    </element>
+  </differential>
+</StructureDefinition>

@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="KoppeltaalPractitioner" />
+  <meta>
+    <lastUpdated value="2017-07-18T09:52:23.802+02:00" />
+  </meta>
+  <url value="http://ggz.koppeltaal.nl/fhir/StructureDefinition/KoppeltaalPractitioner" />
+  <name value="KoppeltaalPractitioner" />
+  <title value="KoppeltaalPractitioner" />
+  <status value="draft" />
+  <date value="2017-07-18T09:50:14.2948614+02:00" />
+  <publisher value="Stichting Koppeltaal" />
+  <fhirVersion value="3.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Practitioner" />
+  <baseDefinition value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
+  <differential>
+    <element id="Practitioner.name.extension:humannameAssemblyOrder">
+      <path value="Practitioner.name.extension" />
+      <sliceName value="humannameAssemblyOrder" />
+    </element>
+    <element id="Practitioner.name.extension:humannameAssemblyOrder.url">
+      <path value="Practitioner.name.extension.url" />
+      <fixedUri value="http://hl7.org/fhir/StructureDefinition/humanname-assembly-order" />
+    </element>
+    <element id="Practitioner.name.family.extension:humannameOwnPrefix">
+      <path value="Practitioner.name.family.extension" />
+      <sliceName value="humannameOwnPrefix" />
+    </element>
+    <element id="Practitioner.name.family.extension:humannameOwnPrefix.url">
+      <path value="Practitioner.name.family.extension.url" />
+      <fixedUri value="http://hl7.org/fhir/StructureDefinition/humanname-own-prefix" />
+    </element>
+    <element id="Practitioner.name.family.extension:humannameOwnName">
+      <path value="Practitioner.name.family.extension" />
+      <sliceName value="humannameOwnName" />
+    </element>
+    <element id="Practitioner.name.family.extension:humannameOwnName.url">
+      <path value="Practitioner.name.family.extension.url" />
+      <fixedUri value="http://hl7.org/fhir/StructureDefinition/humanname-own-name" />
+    </element>
+    <element id="Practitioner.name.family.extension:humannamePartnerPrefix">
+      <path value="Practitioner.name.family.extension" />
+      <sliceName value="humannamePartnerPrefix" />
+    </element>
+    <element id="Practitioner.name.family.extension:humannamePartnerPrefix.url">
+      <path value="Practitioner.name.family.extension.url" />
+      <fixedUri value="http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix" />
+    </element>
+    <element id="Practitioner.name.family.extension:humannamePartnerName">
+      <path value="Practitioner.name.family.extension" />
+      <sliceName value="humannamePartnerName" />
+    </element>
+    <element id="Practitioner.name.family.extension:humannamePartnerName.url">
+      <path value="Practitioner.name.family.extension.url" />
+      <fixedUri value="http://hl7.org/fhir/StructureDefinition/humanname-partner-name" />
+    </element>
+    <element id="Practitioner.name.given.extension:iso21090EnQualifier">
+      <path value="Practitioner.name.given.extension" />
+      <sliceName value="iso21090EnQualifier" />
+    </element>
+    <element id="Practitioner.name.given.extension:iso21090EnQualifier.url">
+      <path value="Practitioner.name.given.extension.url" />
+      <fixedUri value="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier" />
+    </element>
+    <element id="Practitioner.address.line.extension:streetName">
+      <path value="Practitioner.address.line.extension" />
+      <sliceName value="streetName" />
+    </element>
+    <element id="Practitioner.address.line.extension:streetName.url">
+      <path value="Practitioner.address.line.extension.url" />
+      <fixedUri value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName" />
+    </element>
+    <element id="Practitioner.address.line.extension:houseNumber">
+      <path value="Practitioner.address.line.extension" />
+      <sliceName value="houseNumber" />
+    </element>
+    <element id="Practitioner.address.line.extension:houseNumber.url">
+      <path value="Practitioner.address.line.extension.url" />
+      <fixedUri value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber" />
+    </element>
+    <element id="Practitioner.address.line.extension:buildingNumbersuffix">
+      <path value="Practitioner.address.line.extension" />
+      <sliceName value="buildingNumbersuffix" />
+    </element>
+    <element id="Practitioner.address.line.extension:buildingNumbersuffix.url">
+      <path value="Practitioner.address.line.extension.url" />
+      <fixedUri value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix" />
+    </element>
+    <element id="Practitioner.address.line.extension:unitID">
+      <path value="Practitioner.address.line.extension" />
+      <sliceName value="unitID" />
+    </element>
+    <element id="Practitioner.address.line.extension:unitID.url">
+      <path value="Practitioner.address.line.extension.url" />
+      <fixedUri value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-unitID" />
+    </element>
+    <element id="Practitioner.address.line.extension:additionalLocator">
+      <path value="Practitioner.address.line.extension" />
+      <sliceName value="additionalLocator" />
+    </element>
+    <element id="Practitioner.address.line.extension:additionalLocator.url">
+      <path value="Practitioner.address.line.extension.url" />
+      <fixedUri value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator" />
+    </element>
+  </differential>
+</StructureDefinition>

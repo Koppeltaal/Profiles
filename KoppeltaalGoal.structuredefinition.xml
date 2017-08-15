@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <meta>
+    <lastUpdated value="2017-07-06T11:07:36.474+02:00" />
+  </meta>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="pc" />
+  </extension>
+  <url value="http://ggz.koppeltaal.nl/fhir/StructureDefinition/KoppeltaalGoal" />
+  <name value="KoppeltaalGoal" />
+  <status value="draft" />
+  <date value="2017-07-06T11:04:53.5548821+02:00" />
+  <fhirVersion value="3.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Goal" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Goal" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Goal.identifier">
+      <path value="Goal.identifier" />
+      <min value="1" />
+    </element>
+  </differential>
+</StructureDefinition>

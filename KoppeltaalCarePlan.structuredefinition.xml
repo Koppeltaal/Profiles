@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <meta>
+    <lastUpdated value="2017-07-06T11:47:25.847+02:00" />
+  </meta>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="pc" />
+  </extension>
+  <url value="http://ggz.koppeltaal.nl/fhir/StructureDefinition/KoppeltaalCarePlan" />
+  <name value="KoppeltaalCarePlan" />
+  <status value="draft" />
+  <date value="2017-07-06T10:04:05.0754502+02:00" />
+  <fhirVersion value="3.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="CarePlan" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/CarePlan" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="CarePlan.identifier">
+      <path value="CarePlan.identifier" />
+      <min value="1" />
+    </element>
+    <element id="CarePlan.subject">
+      <path value="CarePlan.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://ggz.koppeltaal.nl/fhir/StructureDefinition/KoppeltaalPatient" />
+      </type>
+    </element>
+    <element id="CarePlan.careTeam">
+      <path value="CarePlan.careTeam" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://ggz.koppeltaal.nl/fhir/StructureDefinition/KoppeltaalCareTeam" />
+      </type>
+    </element>
+    <element id="CarePlan.activity.reference">
+      <path value="CarePlan.activity.reference" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Task" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

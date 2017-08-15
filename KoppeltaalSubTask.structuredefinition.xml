@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <meta>
+    <lastUpdated value="2017-07-06T11:51:51.056+02:00" />
+  </meta>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="oo" />
+  </extension>
+  <url value="http://ggz.koppeltaal.nl/fhir/StructureDefinition/KoppeltaalSubTask" />
+  <name value="KoppeltaalSubTask" />
+  <status value="draft" />
+  <date value="2017-07-06T11:49:28.6737325+02:00" />
+  <fhirVersion value="3.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Task" />
+  <baseDefinition value="http://ggz.koppeltaal.nl/fhir/StructureDefinition/KoppeltaalTask" />
+  <differential>
+    <element id="Task.partOf">
+      <path value="Task.partOf" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <profile value="http://ggz.koppeltaal.nl/fhir/StructureDefinition/KoppeltaalTask" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

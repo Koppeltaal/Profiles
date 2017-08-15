@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="KoppeltaalRelatedPerson" />
+  <meta>
+    <lastUpdated value="2017-07-18T14:20:59.011+02:00" />
+  </meta>
+  <url value="http://ggz.koppeltaal.nl/fhir/StructureDefinition/KoppeltaalRelatedPerson" />
+  <name value="KoppeltaalRelatedPerson" />
+  <title value="KoppeltaalRelatedPerson" />
+  <status value="draft" />
+  <date value="2017-07-18T14:20:01.9174742+02:00" />
+  <publisher value="Stichting Koppeltaal" />
+  <fhirVersion value="3.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="RelatedPerson" />
+  <baseDefinition value="http://fhir.nl/fhir/StructureDefinition/nl-core-relatedperson" />
+  <differential>
+    <element id="RelatedPerson.name.extension:humannameAssemblyOrder">
+      <path value="RelatedPerson.name.extension" />
+      <sliceName value="humannameAssemblyOrder" />
+    </element>
+    <element id="RelatedPerson.name.extension:humannameAssemblyOrder.url">
+      <path value="RelatedPerson.name.extension.url" />
+      <fixedUri value="http://hl7.org/fhir/StructureDefinition/humanname-assembly-order" />
+    </element>
+    <element id="RelatedPerson.name.family.extension:humannameOwnPrefix">
+      <path value="RelatedPerson.name.family.extension" />
+      <sliceName value="humannameOwnPrefix" />
+    </element>
+    <element id="RelatedPerson.name.family.extension:humannameOwnPrefix.url">
+      <path value="RelatedPerson.name.family.extension.url" />
+      <fixedUri value="http://hl7.org/fhir/StructureDefinition/humanname-own-prefix" />
+    </element>
+    <element id="RelatedPerson.name.family.extension:humannameOwnName">
+      <path value="RelatedPerson.name.family.extension" />
+      <sliceName value="humannameOwnName" />
+    </element>
+    <element id="RelatedPerson.name.family.extension:humannameOwnName.url">
+      <path value="RelatedPerson.name.family.extension.url" />
+      <fixedUri value="http://hl7.org/fhir/StructureDefinition/humanname-own-name" />
+    </element>
+    <element id="RelatedPerson.name.family.extension:humannamePartnerPrefix">
+      <path value="RelatedPerson.name.family.extension" />
+      <sliceName value="humannamePartnerPrefix" />
+    </element>
+    <element id="RelatedPerson.name.family.extension:humannamePartnerPrefix.url">
+      <path value="RelatedPerson.name.family.extension.url" />
+      <fixedUri value="http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix" />
+    </element>
+    <element id="RelatedPerson.name.family.extension:humannamePartnerName">
+      <path value="RelatedPerson.name.family.extension" />
+      <sliceName value="humannamePartnerName" />
+    </element>
+    <element id="RelatedPerson.name.family.extension:humannamePartnerName.url">
+      <path value="RelatedPerson.name.family.extension.url" />
+      <fixedUri value="http://hl7.org/fhir/StructureDefinition/humanname-partner-name" />
+    </element>
+    <element id="RelatedPerson.name.given.extension:iso21090EnQualifier">
+      <path value="RelatedPerson.name.given.extension" />
+      <sliceName value="iso21090EnQualifier" />
+    </element>
+    <element id="RelatedPerson.name.given.extension:iso21090EnQualifier.url">
+      <path value="RelatedPerson.name.given.extension.url" />
+      <fixedUri value="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier" />
+    </element>
+    <element id="RelatedPerson.address.line.extension:streetName">
+      <path value="RelatedPerson.address.line.extension" />
+      <sliceName value="streetName" />
+    </element>
+    <element id="RelatedPerson.address.line.extension:streetName.url">
+      <path value="RelatedPerson.address.line.extension.url" />
+      <fixedUri value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName" />
+    </element>
+    <element id="RelatedPerson.address.line.extension:houseNumber">
+      <path value="RelatedPerson.address.line.extension" />
+      <sliceName value="houseNumber" />
+    </element>
+    <element id="RelatedPerson.address.line.extension:houseNumber.url">
+      <path value="RelatedPerson.address.line.extension.url" />
+      <fixedUri value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber" />
+    </element>
+    <element id="RelatedPerson.address.line.extension:buildingNumbersuffix">
+      <path value="RelatedPerson.address.line.extension" />
+      <sliceName value="buildingNumbersuffix" />
+    </element>
+    <element id="RelatedPerson.address.line.extension:buildingNumbersuffix.url">
+      <path value="RelatedPerson.address.line.extension.url" />
+      <fixedUri value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix" />
+    </element>
+    <element id="RelatedPerson.address.line.extension:unitID">
+      <path value="RelatedPerson.address.line.extension" />
+      <sliceName value="unitID" />
+    </element>
+    <element id="RelatedPerson.address.line.extension:unitID.url">
+      <path value="RelatedPerson.address.line.extension.url" />
+      <fixedUri value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-unitID" />
+    </element>
+    <element id="RelatedPerson.address.line.extension:additionalLocator">
+      <path value="RelatedPerson.address.line.extension" />
+      <sliceName value="additionalLocator" />
+    </element>
+    <element id="RelatedPerson.address.line.extension:additionalLocator.url">
+      <path value="RelatedPerson.address.line.extension.url" />
+      <fixedUri value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator" />
+    </element>
+  </differential>
+</StructureDefinition>

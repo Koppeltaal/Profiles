@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <meta>
+    <lastUpdated value="2017-07-13T14:36:56.975+02:00" />
+  </meta>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="oo" />
+  </extension>
+  <url value="http://ggz.koppeltaal.nl/fhir/StructureDefinition/KoppeltaalTask" />
+  <name value="KoppeltaalTask" />
+  <status value="draft" />
+  <date value="2017-07-06T11:16:10.7138443+02:00" />
+  <fhirVersion value="3.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Task" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Task" />
+  <derivation value="constraint" />
+  <differential>
+    <element>
+      <path value="Task.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Task.extension:SubTask">
+      <path value="Task.extension" />
+      <sliceName value="SubTask" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://ggz.koppeltaal.nl/fhir/task-subtask" />
+      </type>
+      <binding>
+        <strength value="required" />
+        <valueSetUri value="http://ggz.koppeltaal.nl/fhir/ValueSet/CarePlanActivityStatus" />
+      </binding>
+    </element>
+    <element id="Task.extension:SubTask.extension:identifier">
+      <path value="Task.extension.extension" />
+      <sliceName value="identifier" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Task.extension:SubTask.extension:status">
+      <path value="Task.extension.extension" />
+      <sliceName value="status" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Task.identifier">
+      <path value="Task.identifier" />
+      <min value="1" />
+    </element>
+    <element id="Task.partOf">
+      <path value="Task.partOf" />
+      <max value="0" />
+    </element>
+    <element id="Task.code.coding.system">
+      <path value="Task.code.coding.system" />
+      <fixedUri value="http://ggz.koppeltaal.nl/fhir/ActivityKind" />
+    </element>
+    <element id="Task.code.coding.code">
+      <path value="Task.code.coding.code" />
+      <binding>
+        <strength value="required" />
+        <valueSetUri value="http://ggz.koppeltaal.nl/fhir/ValueSet/ActivityKind" />
+      </binding>
+    </element>
+    <element id="Task.owner">
+      <path value="Task.owner" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

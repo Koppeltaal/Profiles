@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="KoppeltaalReference" />
+  <meta>
+    <lastUpdated value="2017-07-18T10:36:36.335+02:00" />
+  </meta>
+  <url value="http://ggz.koppeltaal.nl/fhir/StructureDefinition/KoppeltaalReference" />
+  <version value="0.1" />
+  <name value="KoppeltaalReference" />
+  <title value="KoppeltaalReference" />
+  <status value="draft" />
+  <date value="2017-07-18T09:56:11.337042+02:00" />
+  <publisher value="Stichting Koppeltaal" />
+  <description value="Reference type as used for all resource references in Koppeltaal, with an extension on resource.identifier, allowing to specify the resource type." />
+  <fhirVersion value="3.0.1" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <type value="Reference" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Reference" />
+  <derivation value="constraint" />
+  <differential>
+    <element>
+      <path value="Reference.identifier.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Reference.identifier.extension:reference-identifier-resource-type">
+      <path value="Reference.identifier.extension" />
+      <sliceName value="reference-identifier-resource-type" />
+      <short value="Optional Resource Type Extension" />
+      <definition value="Optional Resource Type Extension for Reference.identifier" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://ggz.koppeltaal.nl/fhir/StructureDefinition/reference-identifier-resource-type" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

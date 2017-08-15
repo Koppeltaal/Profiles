@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <meta>
+    <lastUpdated value="2017-07-14T16:07:22.116+02:00" />
+  </meta>
+  <url value="http://ggz.koppeltaal.nl/fhir/StructureDefinition/activitydefinition-subtask" />
+  <name value="activitydefinition-subactivity" />
+  <status value="draft" />
+  <date value="2017-07-14T15:45:19.2322971+02:00" />
+  <fhirVersion value="3.0.1" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <contextType value="resource" />
+  <context value="ActivityDefinition" />
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="http://ggz.koppeltaal.nl/fhir/StructureDefinition/activitydefinition-subtask" />
+    </element>
+    <element id="Extension.value[x]:valueString">
+      <path value="Extension.valueString" />
+      <sliceName value="valueString" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <meta>
+    <lastUpdated value="2017-07-13T14:57:44.057+02:00" />
+  </meta>
+  <url value="http://ggz.koppeltaal.nl/fhir/StructureDefinition/KoppeltaalOrganization" />
+  <name value="KoppeltaalOrganization" />
+  <title value="KoppeltaalOrganization" />
+  <status value="draft" />
+  <date value="2017-07-13T14:55:57.7616166+02:00" />
+  <fhirVersion value="3.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Organization" />
+  <baseDefinition value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization" />
+  <differential>
+    <element id="Organization.extension:organizationAlias">
+      <path value="Organization.extension" />
+      <sliceName value="organizationAlias" />
+    </element>
+    <element id="Organization.extension:organizationAlias.url">
+      <path value="Organization.extension.url" />
+      <fixedUri value="http://hl7.org/fhir/StructureDefinition/organization-alias" />
+    </element>
+    <element id="Organization.address.line.extension:streetName">
+      <path value="Organization.address.line.extension" />
+      <sliceName value="streetName" />
+    </element>
+    <element id="Organization.address.line.extension:streetName.url">
+      <path value="Organization.address.line.extension.url" />
+      <fixedUri value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName" />
+    </element>
+    <element id="Organization.address.line.extension:houseNumber">
+      <path value="Organization.address.line.extension" />
+      <sliceName value="houseNumber" />
+    </element>
+    <element id="Organization.address.line.extension:houseNumber.url">
+      <path value="Organization.address.line.extension.url" />
+      <fixedUri value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber" />
+    </element>
+    <element id="Organization.address.line.extension:buildingNumbersuffix">
+      <path value="Organization.address.line.extension" />
+      <sliceName value="buildingNumbersuffix" />
+    </element>
+    <element id="Organization.address.line.extension:buildingNumbersuffix.url">
+      <path value="Organization.address.line.extension.url" />
+      <fixedUri value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix" />
+    </element>
+    <element id="Organization.address.line.extension:unitID">
+      <path value="Organization.address.line.extension" />
+      <sliceName value="unitID" />
+    </element>
+    <element id="Organization.address.line.extension:unitID.url">
+      <path value="Organization.address.line.extension.url" />
+      <fixedUri value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-unitID" />
+    </element>
+    <element id="Organization.address.line.extension:additionalLocator">
+      <path value="Organization.address.line.extension" />
+      <sliceName value="additionalLocator" />
+    </element>
+    <element id="Organization.address.line.extension:additionalLocator.url">
+      <path value="Organization.address.line.extension.url" />
+      <fixedUri value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator" />
+    </element>
+  </differential>
+</StructureDefinition>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <meta>
+    <lastUpdated value="2017-07-18T14:48:38.298+02:00" />
+  </meta>
+  <url value="http://ggz.koppeltaal.nl/fhir/StructureDefinition/KoppeltaalActivityDefinition-device" />
+  <name value="KoppeltaalActivityDefinition-device" />
+  <status value="draft" />
+  <date value="2017-07-14T16:06:31.7771654+02:00" />
+  <fhirVersion value="3.0.1" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <contextType value="resource" />
+  <context value="ActivityDefinition" />
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="http://ggz.koppeltaal.nl/fhir/StructureDefinition/KoppeltaalActivityDefinition-device" />
+    </element>
+    <element id="Extension.value[x]:valueReference">
+      <path value="Extension.valueReference" />
+      <sliceName value="valueReference" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://ggz.koppeltaal.nl/fhir/StructureDefinition/KoppeltaalDevice" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

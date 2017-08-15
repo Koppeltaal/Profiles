@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <meta>
+    <lastUpdated value="2017-07-06T11:07:32.244+02:00" />
+  </meta>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="pc" />
+  </extension>
+  <url value="http://ggz.koppeltaal.nl/fhir/StructureDefinition/KoppeltaalCareTeam" />
+  <name value="KoppeltaalCareTeam" />
+  <status value="draft" />
+  <date value="2017-07-06T10:50:08.9660565+02:00" />
+  <fhirVersion value="3.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="CareTeam" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/CareTeam" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="CareTeam.identifier">
+      <path value="CareTeam.identifier" />
+      <min value="1" />
+    </element>
+    <element id="CareTeam.participant.role.coding.system">
+      <path value="CareTeam.participant.role.coding.system" />
+      <fixedUri value="http://ggz.koppeltaal.nl/fhir/CareTeamParticipantRole" />
+    </element>
+    <element id="CareTeam.participant.role.coding.code">
+      <path value="CareTeam.participant.role.coding.code" />
+      <binding>
+        <strength value="required" />
+        <valueSetUri value="http://ggz.koppeltaal.nl/fhir/ValueSet/CareTeamParticipantRole " />
+      </binding>
+    </element>
+    <element id="CareTeam.participant.member">
+      <path value="CareTeam.participant.member" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://ggz.koppeltaal.nl/fhir/StructureDefinition/KoppeltaalPatient" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>
