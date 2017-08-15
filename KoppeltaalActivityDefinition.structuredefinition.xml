@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-07-18T11:28:10.604+02:00" />
+    <lastUpdated value="2017-07-19T11:31:03.626+02:00" />
   </meta>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="cds" />
@@ -27,14 +27,14 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="ActivityDefinition.extension:subactivities">
+    <element id="ActivityDefinition.extension:subactivity">
       <path value="ActivityDefinition.extension" />
-      <sliceName value="subactivities" />
+      <sliceName value="subactivity" />
       <short value="Optional Extensions Element" />
       <definition value="Optional Extension Element - found in all resources." />
       <type>
         <code value="Extension" />
-        <profile value="http://ggz.koppeltaal.nl/fhir/activitydefinition-subactivity" />
+        <profile value="http://ggz.koppeltaal.nl/fhir/StructureDefinition/activitydefinition-subactivity" />
       </type>
     </element>
     <element id="ActivityDefinition.extension:device">
@@ -53,6 +53,10 @@
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalAidProduct" />
       </type>
+    </element>
+    <element id="ActivityDefinition.identifier">
+      <path value="ActivityDefinition.identifier" />
+      <min value="1" />
     </element>
     <element id="ActivityDefinition.code.coding.system">
       <path value="ActivityDefinition.code.coding.system" />

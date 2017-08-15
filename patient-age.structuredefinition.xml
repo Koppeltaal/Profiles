@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-07-06T10:32:06.051+02:00" />
+    <lastUpdated value="2017-07-20T10:44:05.943+02:00" />
   </meta>
   <url value="http://ggz.koppeltaal.nl/fhir/StructureDefinition/patient-age" />
   <name value="patient-age" />
@@ -16,6 +16,10 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
   <derivation value="constraint" />
   <differential>
+    <element id="Extension">
+      <path value="Extension" />
+      <max value="1" />
+    </element>
     <element id="Extension.url">
       <path value="Extension.url" />
       <fixedUri value="http://ggz.koppeltaal.nl/fhir/StructureDefinition/patient-age" />
