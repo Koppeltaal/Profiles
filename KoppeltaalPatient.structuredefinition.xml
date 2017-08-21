@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="KoppeltaalPatient" />
   <meta>
-    <lastUpdated value="2017-07-19T16:39:38.924+02:00" />
+    <lastUpdated value="2017-08-21T15:34:08.415+02:00" />
   </meta>
   <url value="http://ggz.koppeltaal.nl/fhir/StructureDefinition/KoppeltaalPatient" />
   <name value="KoppeltaalPatient" />
@@ -28,14 +28,26 @@
     <element id="Patient.extension:patient-age">
       <path value="Patient.extension" />
       <sliceName value="patient-age" />
-      <short value="Optional Extensions Element" />
-      <definition value="Optional Extension Element - found in all resources." />
-      <min value="0" />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://ggz.koppeltaal.nl/fhir/StructureDefinition/patient-age" />
       </type>
+      <binding>
+        <strength value="extensible" />
+        <description value="Indicates the country of citizenship." />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.7.6.3--20150401000000" />
+          <display value="NationaliteitCodelijst" />
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="zib-nationaliteit" />
+        <map value="NL-CM:7.6.3" />
+      </mapping>
+    </element>
+    <element id="Patient.identifier">
+      <path value="Patient.identifier" />
+      <min value="1" />
     </element>
     <element id="Patient.name.extension:humannameAssemblyOrder">
       <path value="Patient.name.extension" />
