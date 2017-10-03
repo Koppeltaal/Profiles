@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-10-02T10:47:37.63+02:00" />
+    <lastUpdated value="2017-10-03T08:33:28.681+02:00" />
   </meta>
   <url value="http://ggz.koppeltaal.nl/fhir/StructureDefinition/KoppeltaalOrganization" />
   <name value="KoppeltaalOrganization" />
@@ -5450,7 +5450,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/KoppeltaalOrganization" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -5911,7 +5911,7 @@
       <path value="Organization.partOf" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/KoppeltaalOrganization" />
       </type>
     </element>
     <element id="Organization.endpoint">
