@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-09-07T10:53:53.305+02:00" />
+    <lastUpdated value="2017-10-04T16:18:41.417+02:00" />
   </meta>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="pc" />
@@ -764,7 +764,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/KoppeltaalOrganization" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -5473,15 +5473,15 @@
       </base>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/KoppeltaalPractitioner" />
       </type>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/KoppeltaalPatient" />
       </type>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/KoppeltaalRelatedPerson" />
       </type>
       <type>
         <code value="string" />
@@ -5597,6 +5597,13 @@
       <path value="CareTeam.identifier" />
       <min value="1" />
     </element>
+    <element id="CareTeam.identifier.assigner">
+      <path value="CareTeam.identifier.assigner" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/KoppeltaalOrganization" />
+      </type>
+    </element>
     <element id="CareTeam.status">
       <path value="CareTeam.status" />
       <defaultValueCode value="active" />
@@ -5684,6 +5691,24 @@
         <code value="Reference" />
         <profile value="http://ggz.koppeltaal.nl/fhir/StructureDefinition/KoppeltaalReference" />
         <targetProfile value="http://ggz.koppeltaal.nl/fhir/StructureDefinition/KoppeltaalOrganization" />
+      </type>
+    </element>
+    <element id="CareTeam.note.author[x]">
+      <path value="CareTeam.note.author[x]" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/KoppeltaalPractitioner" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/KoppeltaalPatient" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/KoppeltaalRelatedPerson" />
+      </type>
+      <type>
+        <code value="string" />
       </type>
     </element>
   </differential>
