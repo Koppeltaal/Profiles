@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-10-09T09:25:35.888+02:00" />
+    <lastUpdated value="2017-10-09T10:31:21.248+02:00" />
   </meta>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="cds" />
@@ -1682,7 +1682,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/KoppeltaalOrganization" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -14732,7 +14732,7 @@
       <definition value="A reference to a StructureMap resource that defines a transform that can be executed to produce the intent resource using the ActivityDefinition instance as the input." />
       <comment value="References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository." />
       <min value="0" />
-      <max value="1" />
+      <max value="0" />
       <base>
         <path value="ActivityDefinition.transform" />
         <min value="0" />
@@ -15285,6 +15285,13 @@
       <path value="ActivityDefinition.identifier" />
       <min value="1" />
     </element>
+    <element id="ActivityDefinition.identifier.assigner">
+      <path value="ActivityDefinition.identifier.assigner" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/KoppeltaalOrganization" />
+      </type>
+    </element>
     <element id="ActivityDefinition.library">
       <path value="ActivityDefinition.library" />
       <max value="0" />
@@ -15306,6 +15313,10 @@
     </element>
     <element id="ActivityDefinition.product[x]">
       <path value="ActivityDefinition.product[x]" />
+      <max value="0" />
+    </element>
+    <element id="ActivityDefinition.transform">
+      <path value="ActivityDefinition.transform" />
       <max value="0" />
     </element>
   </differential>
