@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-10-05T11:07:49.143+02:00" />
+    <lastUpdated value="2017-10-05T11:52:30.908+02:00" />
   </meta>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="oo" />
@@ -4733,7 +4733,7 @@
         </extension>
         <strength value="required" />
         <description value="Codes to identify what the task involves.  These will typically be specific to a particular workflow." />
-        <valueSetUri value="http://ggz.koppeltaal.nl/fhir/ActivityKind" />
+        <valueSetUri value="http://ggz.koppeltaal.nl/fhir/ValueSet/ActivityKind" />
       </binding>
       <mapping>
         <identity value="rim" />
@@ -4990,7 +4990,6 @@
       <type>
         <code value="uri" />
       </type>
-      <fixedUri value="http://ggz.koppeltaal.nl/fhir/ActivityKind" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -12395,12 +12394,8 @@
           <valueString value="TaskCode" />
         </extension>
         <strength value="required" />
-        <valueSetUri value="http://ggz.koppeltaal.nl/fhir/ActivityKind" />
+        <valueSetUri value="http://ggz.koppeltaal.nl/fhir/ValueSet/ActivityKind" />
       </binding>
-    </element>
-    <element id="Task.code.coding.system">
-      <path value="Task.code.coding.system" />
-      <fixedUri value="http://ggz.koppeltaal.nl/fhir/ActivityKind" />
     </element>
     <element id="Task.code.coding.code">
       <path value="Task.code.coding.code" />
